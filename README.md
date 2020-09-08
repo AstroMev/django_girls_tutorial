@@ -10,8 +10,7 @@ docker build -t $IMAGE_NAME .
 
 ## Login container
 ```bash
-CONTAINER_ID=$(docker ps -q --filter ancestor=${IMAGE_NAME}); echo $CONTAINER_ID
-docker exec -it $CONTAINER_ID bash
+docker run -p 8000:8000 -v $PWD:/usr/src/app -it $IMAGE_NAME bash
 ```
 
 ## Browsing
