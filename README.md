@@ -10,7 +10,7 @@ docker build -t $IMAGE_NAME .
 
 ## Login container
 ```bash
-docker run -p 8000:8000 -v $PWD:/usr/src/app -it $IMAGE_NAME bash
+docker run -p 8000:8000 -v $PWD:/usr/src/app -it --rm $IMAGE_NAME bash
 ```
 
 ## Browsing
