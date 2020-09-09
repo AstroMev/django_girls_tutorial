@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.6
 USER root
 
 RUN apt-get -y update && \
