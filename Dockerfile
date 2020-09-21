@@ -3,13 +3,15 @@ USER root
 
 RUN apt-get -y update && \
     apt-get -y upgrade && \
-    apt-get install -y vim less
+    apt-get install -y --no-install-recommends \
+    vim less && \
+    apt-get -y clean
 
 WORKDIR /usr/src/app
 
 COPY requirements.txt ./
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 8000
 
