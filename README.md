@@ -9,8 +9,13 @@ make build
 
 ## Login container
 ```bash
+make
+```
+or
+```bash
 make start
 ```
+
 
 ## Browsing
 ```bash

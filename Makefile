@@ -22,7 +22,7 @@ ifneq ($(container),)
 	@echo; echo "$(NAME) container also exists."
 	@docker ps -a --filter ancestor=$(NAME)
 else
-	@echo; echo "please execute 'make start'."
+	@echo; echo "please execute 'make' or 'make start'."
 endif
 endif
 
