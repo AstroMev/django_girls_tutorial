@@ -27,6 +27,9 @@ endif
 endif
 
 clean:
+ifneq ($(container),)
+	docker rm -f $(container)
+endif
 ifneq ($(image),)
 	docker rmi $(image) 
 endif
